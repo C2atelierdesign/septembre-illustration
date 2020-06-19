@@ -30,8 +30,11 @@
     });
 
 
-
-
+    $(document).ready(function() {
+        $("#white_bg").delay(2500).fadeOut();
+        e.preventDefault();
+    });
+    
 //------------------------------------------------------------------------
 //Helper Methods -->
 //------------------------------------------------------------------------
@@ -100,7 +103,7 @@
             iframe_markup: '<iframe src ="{path}" width="{width}" height="{height}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
         });
     }
-
+    
     function imageSliderSettings() {
         $(".simple-image-slider-wrapper").each(function () {
             var id = $(this).attr('id');
@@ -200,5 +203,5 @@
             alert('Your email is not in valid format');
         }
     }
-
+    
 })(jQuery);

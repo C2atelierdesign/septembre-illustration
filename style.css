@@ -64,6 +64,48 @@ body.open.done {
     overflow-y:scroll;
 }
 
+#intro{
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 900;
+}
+
+#white_bg{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #FFF;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 999;
+}
+
+#intro img{
+    width: 35%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99999;
+    -webkit-animation: up 1s ease-in-out;
+    animation: up 1s ease;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+@keyframes up {
+    0% {
+        top: 0;
+    }
+    
+    100% {
+        top: -100%;
+    }
+}
+
 .site-wrapper {
     overflow: hidden;
 }
@@ -210,7 +252,7 @@ a.button:hover {
     top: 50%;
     transform: translateY(-50%);
     left: 30px;
-    z-index: 999;
+    z-index: -7;
 }
 
 .header-logo {
@@ -218,6 +260,22 @@ a.button:hover {
     bottom: 0;
     left: 30px;
     transition: .7s;
+    z-index: -3;
+     -webkit-animation: coucou 1s ease-in-out;
+    animation: coucou 1s ease;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    animation-delay: 2.3s;
+}
+
+@keyframes coucou {
+    0% {
+        bottom: -100%;
+    }
+    
+    100% {
+        bottom: 0;
+    }
 }
 
 .open .header-logo {
