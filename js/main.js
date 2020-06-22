@@ -29,12 +29,12 @@
         animateElement();
     });
 
-
     $(document).ready(function() {
-        $("#white_bg").delay(2500).fadeOut();
+        $("#white_bg, #intro").delay(2500).fadeOut();
         e.preventDefault();
     });
     
+
 //------------------------------------------------------------------------
 //Helper Methods -->
 //------------------------------------------------------------------------
