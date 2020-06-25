@@ -89,11 +89,32 @@ body.open.done {
     left: 50%;
     transform: translateX(-50%);
     z-index: 99999;
+}
+
+.intr-img1{
+    -webkit-animation: attr .5s ease-in-out;
+    animation: attr .5s ease;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
+}
+
+@keyframes attr {
+    0% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+    }
+}
+
+.intr-img2{
     -webkit-animation: up 1s ease-in-out;
     animation: up 1s ease;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 
 @keyframes up {
@@ -147,7 +168,7 @@ body.open.done {
     position: relative;
     transition: transform 0.7s ease;
     width: calc(100% - 200px);
-    margin-left: 165px;
+    margin-left: 185px;
     margin-top: 20px;
     padding: 0 35px;
 }
@@ -252,12 +273,12 @@ a.button:hover {
     top: 50%;
     transform: translateY(-50%);
     left: 30px;
-    z-index: -7;
+   
 }
 
 .header-logo {
     position: fixed;
-    bottom: 0;
+    bottom: -100%;
     left: 30px;
     transition: .7s;
     z-index: -3;
@@ -265,7 +286,7 @@ a.button:hover {
     animation: coucou 1s ease;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    animation-delay: 2.3s;
+    animation-delay: 1.8s;
 }
 
 @keyframes coucou {
@@ -583,15 +604,16 @@ p.menu-text-title {
 
 a.social-text {    
     margin-right: 35px;
-    font-size: 10px;
-    letter-spacing: 1px;
+    cursor: pointer;
 }
 
-.social-holder a:last-of-type {
-    margin-right: 0;
+a.social-text img{
+     transition: all .3s ease;
 }
 
-
+a.social-text:hover img{
+    opacity: 0.5;
+}
 /* ===================================
     4. Home CSS
 ====================================== */

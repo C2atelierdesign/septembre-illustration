@@ -261,8 +261,10 @@ div.pp_overlay {
 div.pp_pic_holder {
     display: none;
     position: absolute;
-    width: 100px;
+    /*width: 100px;*/
     z-index: 10000;
+    width: 80% !important;
+    left: 30px!important;
 }
 
 
@@ -298,7 +300,7 @@ div.pp_pic_holder {
     width: 20px;
 }
 
-.pp_content { height: 40px; min-width: 40px; }
+.pp_content { height: 40px; min-width: 40px; width: 80%!important; }
 * html .pp_content { width: 40px; }
 
 .pp_fade { display: none; }
@@ -499,6 +501,8 @@ a.pp_close {
     top: 50%;
     width: 24px;
 }
+
+
 
 #pp_full_res {
     line-height: 1 !important;

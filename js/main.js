@@ -29,10 +29,14 @@
         animateElement();
     });
 
+    
+    
     $(document).ready(function() {
-        $("#white_bg, #intro").delay(2500).fadeOut();
+        $("#white_bg, #intro").delay(1800).fadeOut();
         e.preventDefault();
     });
+    
+    
     
 
 //------------------------------------------------------------------------
@@ -53,7 +57,7 @@
         $(".animate").each(function (i) {
             var top_of_object = $(this).offset().top;
             var bottom_of_window = $(window).scrollTop() + $(window).height();
-            if ((bottom_of_window - 70) > top_of_object) {
+            if ((bottom_of_window - 20) > top_of_object) {
                 $(this).addClass('show-it');
             }
         });
