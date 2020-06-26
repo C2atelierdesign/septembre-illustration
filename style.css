@@ -164,6 +164,10 @@ body.open.done {
     width: 12%;
 }
 
+.header-logo-resp{
+    display: none;
+}
+
 .site-content {
     position: relative;
     transition: transform 0.7s ease;
@@ -276,7 +280,7 @@ a.button:hover {
    
 }
 
-.header-logo {
+.header-logo{
     position: fixed;
     bottom: -100%;
     left: 30px;
@@ -1113,6 +1117,12 @@ footer {
     11. Responsive CSS
 ====================================== */
 
+@media screen and (min-width: 1100px) {
+    div.pp_pic_holder {
+        left: 30px!important;
+    }
+}
+
 @media screen and (min-width: 1440px) {
 
     #portfolio-wrapper{
@@ -1237,32 +1247,39 @@ footer {
     }
 }
 
-
-@media screen and (max-width: 1360px) {
-
-    .blog-item-holder .entry-info {
-        max-width: 85%;
-    }      
-
-    .single-post .post-info-wrapper {
-        float: none;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 50px;
-    }    
-
-    .single-post .post-info-wrapper .entry-info {
-        position: relative !important;
-        top: 0 !important;
+@media screen and (height: 1366px) {
+    .grid-sizer {
+        width: 50%;
     }
-
-    .single-post .post-info-wrapper .entry-info > div {
-        display: inline-block;
-        margin: 0 20px;
+    
+    .grid-item{
+           width: calc(50% - 30px);
     }
-
-    .single-post .entry-content {
-        float: none;
+    
+    .footer-content{
+        margin-top: 40px;
+    }
+    
+    #intro img{
+        width: 50%;
+    }
+    
+    .header-logo img{
+        width: 16%;
+    }
+    
+    div.pp_default .pp_content_container .pp_details{
+        margin-top: 80px!important;
+    }
+    
+    div.pp_default .pp_description{
+        padding-left: 0;
+        margin-top: -72px;
+        margin-left: -120px;
+    }
+    
+    .site-content{
+        margin-left: 180px;
     }
 
 }
@@ -1280,47 +1297,63 @@ footer {
         margin-top: 80px;
     }
 
-    .header-logo img,
-    .footer-logo img {
-        width: 70px;
-        height: auto;
-    }    
+    .header-logo{
+        display: none;
+    }   
+    
+    .header-logo-resp{
+        display: block;
+        width: 12%;
+        position: absolute;
+        top: -100%;
+        left: 30px;
+        transition: .7s;
+        z-index: -3;
+         -webkit-animation: coucou2 1s ease-in-out;
+        animation: coucou2 1s ease;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        animation-delay: 1.8s;
+    }
 
-    #toggle {
-        padding: 0;
+    @keyframes coucou2 {
+        0% {
+            top: -100%;
+        }
+    
+        100% {
+            top: 0;
+        }
     }
 
     .menu-holder-front {
-        display: block;
+        display: flex;
         position: relative;
         width: calc(100% - 30px);
-        left: 15px;
+        top: 60px;
+        left: 35%;
+        flex-flow: nowrap;
+        align-items: center;
+        
     }
 
-    .toggle-holder {
-        right: 15px;
-        top: 0;
-        position: absolute;
-        margin-left: 0;
+    .menu-right-text, .menu-left-text{
+        margin-right: 25px;
     }
-
-    .open .toggle-holder {
-        top: 30px;
-        right: 30px;
+    
+    .social-holder{
+        display: flex;
+        align-content: center;
     }
-
-    .menu-wrapper-back {
-        padding-top: 100px;
-        padding-left: 10%;
-    }    
-
-    .blog-item-holder .entry-holder {
-        opacity: 1;
-        padding: 25px 0;
+    
+    div.pp_default .pp_content_container .pp_details{
+        margin-top: 80px!important;
     }
-
-    .blog-item-holder .entry-holder {
-        display: block;
+    
+    div.pp_default .pp_description{
+        padding-left: 0;
+        margin-top: -72px;
+        margin-left: -120px;
     }
 
     .one_half, 
@@ -1334,12 +1367,16 @@ footer {
         margin-left: 0;
     }
 
-    .contact-form {
-        margin-top: 50px;
-    }
-
     .footer-content {
         margin-top: 75px;
+    }
+    
+     .grid-sizer {
+        width: 50%;
+    }
+    
+    .grid-item{
+           width: calc(50% - 30px);
     }
 
 }

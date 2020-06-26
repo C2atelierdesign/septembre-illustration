@@ -263,8 +263,6 @@ div.pp_pic_holder {
     position: absolute;
     /*width: 100px;*/
     z-index: 10000;
-    width: 80% !important;
-    left: 30px!important;
 }
 
 
