@@ -31,11 +31,14 @@
 
     
     
-    $(document).ready(function() {
-        $("#white_bg, #intro").delay(1800).fadeOut();
+    $(document).ready(function () {
+        $("#white_bg, #intro").delay(2000).fadeOut();
         e.preventDefault();
     });
     
+    $("#intro").on('click', function () {
+        $(".intr-img1, .intr-img1, #white_bg, #intro").css("display", "none");
+    });
     
     
 
@@ -154,7 +157,7 @@
            });
         }
         function setupSwipe() {
-           $(".pp_hoverContainer").touchwipe({
+           $(".pp_content_container").touchwipe({
             wipeLeft: function() { 
                 $.prettyPhoto.changePage('next');
             },  

@@ -103,7 +103,7 @@ b{
     animation: attr .5s ease;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    animation-delay: .5s;
+    animation-delay: 1s;
 }
 
 @keyframes attr {
@@ -121,7 +121,7 @@ b{
     animation: up 1s ease;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    animation-delay: 1s;
+    animation-delay: 1.5s;
 }
 
 @keyframes up {
