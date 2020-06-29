@@ -37,6 +37,7 @@ div.pp_default .pp_gallery a.pp_arrow_previous,
 div.pp_default .pp_gallery a.pp_arrow_next { position: static; left: auto; }
 div.pp_default .pp_nav .pp_play,
 div.pp_default .pp_nav .pp_pause { background: url(../images/prettyPhoto/default/sprite.png) -51px 1px no-repeat; height:30px; width:30px; }
+.pp_play{display: none;}
 div.pp_default .pp_nav .pp_pause { background-position: -51px -29px; }
 div.pp_default .pp_details { position: relative; }
 div.pp_default a.pp_arrow_previous,
@@ -399,7 +400,7 @@ a.pp_arrow_next {
 .pp_gallery ul a img { border: 0; }
 
 .pp_gallery li {
-    display: block;
+    display: none;
     float: left;
     margin: 0 5px 0 0;
     padding: 0;

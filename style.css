@@ -45,6 +45,7 @@ body {
 
 
 body a {
+    font-family: 'Fira Sans Condensed', sans-serif;
     text-decoration: none;
     color: #4F4F4F;
     transition: color .2s ease;
@@ -62,6 +63,12 @@ body.open.done {
     width: 100%;
     position: absolute;
     overflow-y:scroll;
+}
+
+b{
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
 #intro{
@@ -585,20 +592,32 @@ span.menu-num {
 }
 
 .menu-text {    
-    font-size: 14px;
-    line-height: 120%;    
+    font-size: 12px;
+    line-height: 120%;
+    font-weight: 100;
 }
 
-.menu-right-text .menu-text a:hover {
+.menu-left-text{
+    display: flex;
+    flex-flow: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.menu-left-text .menu-text a:hover {
     color: #acacac;
 }
 
-p.menu-text-title {
-    font-size: 10px;
+.menu-text-title {
     line-height: 110%;
-    letter-spacing: 1px;
-    padding-bottom: 4px;
     margin-bottom: 0;
+}
+
+.menu-text-title img{
+    width: 20px;
+    margin-right: 10px;
+   
 }
 
 .menu-right-text {
@@ -607,15 +626,15 @@ p.menu-text-title {
 }
 
 a.social-text {    
-    margin-right: 35px;
+
     cursor: pointer;
 }
 
-a.social-text img{
+a.social-text img, .mail-icon{
      transition: all .3s ease;
 }
 
-a.social-text:hover img{
+a.social-text:hover img, .mail-icon:hover{
     opacity: 0.5;
 }
 /* ===================================
@@ -672,7 +691,8 @@ a.social-text:hover img{
     height: auto;
     border-radius: 10px;
     display: block;
-    filter: grayscale(50%);
+    filter: grayscale(60%);
+    transition: all .3s ease;
 }
 
 .grid-item .entry-holder {
@@ -681,7 +701,7 @@ a.social-text:hover img{
     padding: 50px 20px;
 }
 
-.grid-item a.item-link:after {
+/*.grid-item a.item-link:after {
     content: "";
     display: block;
     position: absolute;
@@ -693,10 +713,11 @@ a.social-text:hover img{
     opacity: 0;
     border-radius: 10px;
     transition: opacity .3s ease;
-}
+}*/
 
-.grid-item a.item-link:hover:after {
-    opacity: 1;
+.grid-item a.item-link:hover > img {
+    filter: grayscale(0%);
+    transform: scale(1.1);
 }
 
 
@@ -1337,7 +1358,7 @@ footer {
         
     }
 
-    .menu-right-text, .menu-left-text{
+    .menu-left-text{
         margin-right: 25px;
     }
     
@@ -1412,7 +1433,7 @@ footer {
         transform: none;
     }
 
-    .menu-right-text {
+    .menu-left-text {
         display: block;
         width: 75%;
         margin-left: 50px;

@@ -433,13 +433,13 @@ div.pp_default .pp_description {
     /*position: absolute;
     top: -75px;
     right: -40%;*/
-    margin-top: -125px;
+    margin-top: -145px;
     float: left;
     padding-left: 102%;
     color: #4F4F4F;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 em{
-    font-weight: 500;
+    font-weight: 100;
 }
