@@ -36,6 +36,14 @@
         e.preventDefault();
     });
     
+    $(".intr-img2").mouseover( function () {
+        $(".bg-intro").css("display", "block").fadeIn();
+    });
+    
+    $(".intr-img2").mouseout( function () {
+        $(".bg-intro").css("display", "none").fadeOut();
+    });
+    
     $("#intro").on('click', function () {
         $(".intr-img1, .intr-img1, #white_bg, #intro").css("display", "none");
     });
