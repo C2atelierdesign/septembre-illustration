@@ -32,15 +32,16 @@
     
     
     $(document).ready(function () {
-        $("#white_bg, #intro").delay(2000).fadeOut();
+        $("#white_bg, #intro").delay(8500).fadeOut();
         e.preventDefault();
     });
     
     $("#intro").on('click', function () {
         $(".intr-img1, .intr-img1, #white_bg, #intro").css("display", "none");
     });
-    
-    
+    $("#intro").onTouchMove(function () {
+        $(".intr-img1, .intr-img1, #white_bg, #intro").css("display", "none");
+    });
 
 //------------------------------------------------------------------------
 //Helper Methods -->

@@ -91,7 +91,6 @@ b{
 }
 
 #intro img{
-    width: 35%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -99,11 +98,12 @@ b{
 }
 
 .intr-img1{
+    height: 100%;
     -webkit-animation: attr .5s ease-in-out;
     animation: attr .5s ease;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    animation-delay: 1s;
+    animation-delay: 8s;
 }
 
 @keyframes attr {
@@ -117,11 +117,13 @@ b{
 }
 
 .intr-img2{
+    display: none;
+    width: 35%;
     -webkit-animation: up 1s ease-in-out;
     animation: up 1s ease;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    animation-delay: 1.5s;
+    animation-delay: 3.5s;
 }
 
 @keyframes up {
@@ -168,11 +170,7 @@ b{
 .header-logo img {
     max-width: none;
     max-height: none;
-    width: 12%;
-}
-
-.header-logo-resp{
-    display: none;
+    width: 25%;
 }
 
 .site-content {
@@ -281,314 +279,34 @@ a.button:hover {
 .menu-holder-front {
     display: inline-block;
     position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 30px;
-   
+    height: 100%;
+    width: 24%; 
+    transition: all .3s ease;
+    z-index: 300;
 }
 
 .header-logo{
     position: fixed;
-    bottom: -100%;
+    top: -100%;
     left: 30px;
-    transition: .7s;
+    filter: grayscale(100%);
+    transition: all .3s ease;
     z-index: -3;
      -webkit-animation: coucou 1s ease-in-out;
     animation: coucou 1s ease;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    animation-delay: 1.8s;
+    animation-delay: 3.8s;
 }
 
 @keyframes coucou {
     0% {
-        bottom: -100%;
+        top: -100%;
     }
     
     100% {
-        bottom: 0;
+        top: 30px;
     }
-}
-
-.open .header-logo {
-    opacity: 0;
-    pointer-events: none;
-    cursor: default;
-    text-decoration: none;
-}
-
-.toggle-holder {
-    position: relative;
-    width: 70px;
-    height: 70px;
-    margin-left: 35px;
-}
-
-.open .toggle-holder {
-    position: fixed;    
-}
-
-.toggle-holder:after {
-    content: "";
-    width: 100%;
-    height: 0;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background-color: red;
-    z-index: -1;
-    transition: .3s;
-}
-
-.open .toggle-holder:after {    
-    height: 100%;    
-    transition-delay: .5s;
-}
-
-#toggle {
-    height: 70px;
-    position: relative;
-}
-
-#toggle:hover {
-    cursor: pointer;
-}
-
-#toggle:before, 
-#toggle:after {
-    content: '';
-    height: 2px;
-    width: 0;
-    background: #4d4d4d;
-    left: 17px;
-    position: absolute;
-    transform-origin: 50% 50%;
-    transition: transform .7s, width .3s, margin .3s;
-    top: 35px;
-}
-
-#toggle:before {    
-    transform: translate3d(0, -8px, 0px);    
-}
-
-#toggle.on:before {
-    transform: rotate3d(0, 0, 1, 45deg) translate3d(0, 0, 0);
-    background-color: #fff;
-    margin-left: 5px;
-    margin-top: -2px;
-    width: 26px !important;
-    height: 4px;
-}
-
-#toggle.on:after {
-    transform: rotate3d(0, 0, 1, -45deg);
-    background-color: #fff;
-    margin-left: 5px !important;
-    margin-top: -2px;
-    width: 26px !important;
-    height: 4px;
-}
-
-#toggle:after { 
-    transform: translate3d(0, 8px, 0);
-}
-
-#toggle .menu-line {
-    width: 0;
-    height: 2px;
-    background: #4d4d4d;
-    left: 17px;
-    position: absolute;
-    transition: transform .7s, width .3s, margin .3s;
-    top: 35px;
-}
-
-#toggle.all-loaded .menu-line {
-    width: 20px;
-}
-
-#toggle.all-loaded:before {
-    width: 36px;
-}
-
-#toggle.all-loaded:after {
-    width: 30px;
-}
-
-#toggle:hover .menu-line {
-    margin-left: 8px;
-}
-
-#toggle:hover:after {
-    margin-left: 3px;
-}
-
-#toggle.on:hover:after {
-    margin-left: 0;
-}
-
-#toggle.on .menu-line {
-    opacity: 0;
-}
-
-#header-main-menu {
-    width: 40%;
-    display: inline-block;
-    vertical-align: top;    
-}
-
-span.menu-num {
-    position: absolute;
-    top: 5px;
-    color: #666;
-    left: -25px;
-}
-
-.main-menu.sm-clean {
-    background-color: transparent;
-    display: inline-block;
-    max-width: 90%;
-}
-
-.main-menu > li {
-    margin-bottom: 15px;
-}
-
-.sm ul {
-    padding-left: 0;
-}
-
-.sm-clean a {
-    position: relative;
-}
-
-.sm-clean a, 
-.sm-clean a:hover, 
-.sm-clean a:focus, 
-.sm-clean a:active {
-    font-family: 'Unna', serif;
-    color: #fff;
-    padding: 5px 0;
-    font-size: 42px;
-    line-height: 110%;
-    font-weight: 400;    
-}
-
-.sm-clean > li > a:after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 15px;
-    background-color: #333333;
-    transition: width .3s;
-    position: absolute;
-    left: -5%;
-    bottom: 8px;
-    z-index: -1;
-}
-
-.sm-clean a.current:after, 
-.sm-clean a:hover:after, 
-.sm-clean ul a:hover:after {
-    width: 110%;
-}
-
-.sm-clean a.current {
-    color: #ff0000;    
-}
-
-.sm-clean a span.sub-arrow {
-    color: #acacac;
-    font-size: 45px !important;
-    right: -45px;
-    left: auto;
-}
-
-.sm-clean a span.sub-arrow:before {
-    display: block;
-    content: '\203A';
-    transform: rotate(90deg);
-}
-
-.sm-clean a.highlighted span.sub-arrow:before {
-    display: block;
-    content: '\203A';
-    transform: rotate(270deg) translateY(-3px);
-    margin-left: -4px;
-}
-
-.sm-clean .sub-menu li a,
-.sm-clean .children li a {
-    color: #bbbbbb;
-    text-transform: uppercase;
-    font-size: 15px;
-    line-height: 10px;
-    padding: 10px 0;
-    letter-spacing: 0.5px;
-    font-weight: 400;
-}
-
-.sm-clean .sub-menu li a:hover, 
-.sm-clean .sub-menu li a.current, 
-.sm-clean .children li a:hover, 
-.sm-clean .children li a.current {
-    color: #fff;
-}
-
-.menu-holder-back {
-    width: 100%;
-    position: fixed;
-    background-color: #000;    
-    background-image: url("images/lines.png");  
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    height: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
-    z-index: 998;
-    top: 0;
-    left: 0;
-    padding-top: 135px;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s linear 0.5s, opacity 0.7s ease;
-}
-
-.menu-holder-back.open {
-    visibility: visible;
-    opacity: 1;
-    transition-delay: 0s;    
-
-}
-
-.menu-holder-back {
-    padding-top: 0;
-    height: 100%;
-}
-
-@media screen and (min-width: 768px) {
-
-    .menu-holder-back > * {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-}
-
-.menu-wrapper-back {
-    width: 1110px;
-    max-width: 95%;
-    margin: 70px auto 0;
-    padding-left: 165px;
-    opacity: 0;
-    transition: opacity 0.7s ease, margin-top 0.7s ease;
-}
-
-.open .menu-wrapper-back {
-    opacity: 1;
-    margin-top: 0;
-    transition-delay: 0.3s;
 }
 
 .menu-text {    
@@ -603,6 +321,26 @@ span.menu-num {
     align-items: center;
     justify-content: flex-start;
     margin-bottom: 20px;
+    margin-left: 30px;
+    transition: all .3s ease;
+     visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.3s, opacity 0.5s ease;
+}
+
+
+.menu-holder-front:hover .header-logo{
+    filter: grayscale(0%);
+}
+
+.menu-holder-front:hover .menu-left-text{
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+.menu-left-text:nth-child(2){
+    margin-top: 50%;
 }
 
 .menu-left-text .menu-text a:hover {
@@ -617,7 +355,6 @@ span.menu-num {
 .menu-text-title img{
     width: 20px;
     margin-right: 10px;
-   
 }
 
 .menu-right-text {
@@ -637,6 +374,7 @@ a.social-text img, .mail-icon{
 a.social-text:hover img, .mail-icon:hover{
     opacity: 0.5;
 }
+
 /* ===================================
     4. Home CSS
 ====================================== */
@@ -675,11 +413,14 @@ a.social-text:hover img, .mail-icon:hover{
     width: 100%;
     overflow: hidden;
    width: calc(33.333% - 30px);
-    border: 15px solid transparent;
+    margin: 15px;
+
+    border-radius: 10px;
 }
 
 .grid-item.p_one_half {
     width: 33.333%;
+
 }
 
 .grid-item.p_one {
@@ -718,6 +459,7 @@ a.social-text:hover img, .mail-icon:hover{
 .grid-item a.item-link:hover > img {
     filter: grayscale(0%);
     transform: scale(1.1);
+    border-radius: 40px;
 }
 
 
@@ -1316,11 +1058,7 @@ footer {
 
     .site-content {
         margin-top: 80px;
-    }
-
-    .header-logo{
-        display: none;
-    }   
+    } 
     
     .header-logo-resp{
         display: block;
