@@ -146,7 +146,7 @@ b{
 }
 
 .intr-img2{
-    width: 30%;
+    width: 25%;
     filter: grayscale(0%);
     z-index: 600;
     transition: all .3s ease;
@@ -316,7 +316,7 @@ a.button:hover {
     animation: coucou 1s ease;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    animation-delay: 3.8s;
+    animation-delay: 2.5s;
 }
 
 @keyframes coucou {
@@ -432,9 +432,8 @@ a.social-text:hover img, .mail-icon:hover{
     line-height: 0;
     width: 100%;
     overflow: hidden;
-   width: calc(33.333% - 30px);
+    width: calc(33.333% - 30px);
     margin: 15px;
-
     border-radius: 10px;
 }
 
@@ -480,398 +479,6 @@ a.social-text:hover img, .mail-icon:hover{
     filter: grayscale(0%);
     transform: scale(1.1);
     border-radius: 40px;
-}
-
-
-/* ===================================
-    5. About CSS
-====================================== */
-
-ul.timeline-holder {
-    margin: 0;
-    padding: 0 0 0 40px;
-}
-
-li.timeline-event {
-    margin: 0 0 42px 60px;
-    position: relative;
-    padding-top: 5px;
-    padding-left: 10px;
-    list-style: none;
-    color: #808080;
-    transition: .3s;
-}
-
-li.timeline-event:hover {
-    color: #fff;
-}
-
-li.timeline-event:before {
-    content: "";
-    width: 2px;
-    height: calc(100% - 20px);
-    position: absolute;
-    background-color: #333;
-    left: -30px;
-    top: 51px;
-}
-
-li.timeline-event:last-child:before {
-    display: none;
-}
-
-li.timeline-event:last-child {
-    margin-bottom: 0;
-}
-
-li.timeline-event:hover span.timeline-circle:before {
-    background-color: #333;
-}
-
-span.timeline-circle {
-    position: absolute;
-    top: 0;
-    left: -30px;
-}
-
-span.timeline-circle:before {
-    content: "";
-    display: block;
-    width: 30px;
-    height: 30px;
-    border-radius: 90%;
-    border: 2px solid #333;
-    position: absolute;
-    left: -16px;
-    top: 3px;
-    z-index: 1;
-    transition: .3s;
-}
-
-.timeline-event-date {
-    position: absolute;
-    left: -100px;
-    top: 2px;
-    color: #fff;
-    transition: .3s;
-}
-
-li.timeline-event:hover .timeline-event-date {
-    transform: translateX(-10px);
-}
-
-.timeline-event-content {
-    line-height: 160%;
-    text-align: left;
-}
-
-
-/* ===================================
-    6. Image Slider CSS
-====================================== */
-
-.simple-image-slider-pagination.swiper-pagination {
-    left: 50%;
-    transform: translateX(-50%);    
-    position: relative;
-    margin-bottom: 50px;
-    margin-top: 30px;
-}
-
-.simple-image-slider-pagination .swiper-pagination-bullet {
-    width: 15px;
-    height: 15px;
-    opacity: 1;
-    vertical-align: middle;
-    margin: 0 5px;
-    border: 3px solid white;
-}
-
-.simple-image-slider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    border-color: #666;
-    background-color: #666;
-}
-
-
-/* ===================================
-    7. Blog Page CSS
-====================================== */
-
-.blog-holder > article {
-    margin-bottom: 100px;
-}
-
-.blog-holder > article:last-of-type {
-    margin-bottom: 0;
-}
-
-.blog-item-holder .entry-holder {
-    width: 100%;
-    position: relative;
-    text-align: center;
-}
-
-.blog-item-holder img {    
-    margin-bottom: -50px;
-}
-
-.blog-item-holder .entry-info {
-    margin: 0;
-    list-style: none;
-    padding: 20px;
-    display: inline-flex;
-    width: 100%;
-    max-width: 740px;
-    justify-content: space-around;
-    background-color: #fff;
-    color: #000;
-}
-
-.blog-item-holder h2.entry-title {
-    font-family: 'Unna', serif;
-    font-weight: 700;
-    font-size: 47px;
-    line-height: 120%;
-    padding: 0;
-    word-break: break-word;
-    margin: 0 auto -95px;
-    max-width: 550px;
-    position: relative;
-}
-
-.entry-info li {
-    font-size: 15px;
-    line-height: 100%;
-}
-
-.entry-info li .entry-info-text {
-    font-weight: 500;
-    font-size: 10px;
-    color: #666666;
-    letter-spacing: 3px;
-    margin-bottom: 7px;
-}
-
-
-/* ===================================
-    8. Single Post CSS
-====================================== */
-
-.single-post .post-info-wrapper {
-    font-size: 15px;
-    width: 150px;
-    margin-right: 100px;
-    float: left;
-    clear: left;
-    min-width: 150px;
-    min-height: 1px;
-    margin-top: 9px;
-}
-
-.single-post .post-info-wrapper .entry-info,
-.single-post .post-info-wrapper .entry-info a {
-    position: relative;
-    color: #808080;
-}
-
-.single-post .post-info-wrapper .entry-info a:hover {
-    color: #fff;
-}
-
-.single-post .post-info-wrapper .entry-info > div {
-    margin-bottom: 20px;
-}
-
-.single-post .post-info-wrapper .entry-info > div:last-of-type {
-    margin-bottom: 0;
-}
-
-.single-post .post-info-wrapper .text-holder {
-    font-size: 10px;
-    color: #fff;
-    letter-spacing: 3px;
-    margin-bottom: 0;
-    line-height: 15px;
-    font-weight: 500;
-}
-
-.single-post h1.entry-title {
-    font-family: "Unna", serif;
-    font-weight: 700;
-    font-size: 47px;
-    line-height: 120%;
-    -ms-word-wrap: break-word;
-    word-wrap: break-word;
-    padding: 0;
-    margin: 0 auto 60px;
-    width: 680px;
-    max-width: 100%;
-    text-align: center;
-}
-
-.single-post .entry-info div:last-of-type:after {
-    display: none;
-}
-
-.single-post .entry-info ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.single-post .entry-info ul li {
-    display: inline-block;
-}
-
-.single-post .entry-info .cat-links li:after {
-    content: ",";
-    padding-right: 5px;
-}
-
-.single-post .entry-info .cat-links ul li:last-child:after {
-    display: none;
-}
-
-.img-caption {
-    display: table;
-    padding: 12px 60px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: #808080;
-    margin-top: -30px;
-    position: relative;
-    z-index: 1;
-}
-
-.single-post .entry-content {
-    width: 680px;
-    float: left;
-    margin: 0 auto;
-    max-width: 100%;
-}
-
-.tags-holder {
-    margin: 30px 0;
-    display: inline-block;
-}
-
-.tags-holder a  {
-    color: #808080;
-    border: 3px solid #808080;
-    text-decoration: none;
-    margin-right: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: inline-block;
-    padding: 5px 17px 5px 20px;
-    font-size: 10px;
-    text-transform: uppercase;
-    background-color: transparent;
-    border-radius: 50px;
-    transition: all .3s ease;
-    letter-spacing: 3px;
-    font-weight: 700;
-}
-
-.tags-holder a:last-of-type {
-    margin-right: 0;
-}
-
-.tags-holder a:hover {   
-    color: #fff;
-    border-color: #fff;
-}
-
-
-/* ===================================
-    9. Contact Page CSS
-====================================== */
-
-.my-info span {
-    color: #808080;
-}
-
-.contact-form input[type=text], 
-.contact-form input[type=email], 
-.contact-form textarea {
-    border: 0;
-    border-bottom: 2px solid #333333;
-    padding-top: 13px;
-    padding-bottom: 13px;
-    margin: 10px 0;
-    height: 28px;
-    font-size: 14px;
-    font-family: 'Work Sans', sans-serif;
-    width: 100%;
-    line-height: 25px;
-    background-color: transparent;
-    color: #808080;
-}
-
-.contact-form input[name="your-name"] {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-.contact-form textarea {
-    height: 150px;
-}
-
-.contact-form input[type=submit] {
-    display: inline-block;
-    border: 2px solid;
-    text-align: center;
-    padding: 20px 0px;
-    font-size: 14px;
-    cursor: pointer;
-    margin-bottom: 25px;
-    vertical-align: middle;
-    text-decoration: none;
-    background-color: #1a1a1a;
-    color: #808080;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 700;
-    width: 100%;
-    letter-spacing: 8px;
-    transition: opacity .3s ease;
-    cursor: pointer;
-}
-
-.contact-form input[type=submit]:hover {
-    opacity: 0.8;
-}
-
-.contact-form input[type=text]::-webkit-input-placeholder, 
-.contact-form input[type=email]::-webkit-input-placeholder, 
-.contact-form textarea::-webkit-input-placeholder {
-    font-family: 'Work Sans', sans-serif;
-    color: #808080;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 25px;    
-    opacity: 1;  
-}
-
-.contact-form input[type=text]:-ms-input-placeholder, 
-.contact-form input[type=email]:-ms-input-placeholder, 
-.contact-form textarea:-ms-input-placeholder {
-    font-family: 'Work Sans', sans-serif;
-    color: #808080;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 25px;    
-    opacity: 1;  
-}
-
-.contact-form input[type=text]::placeholder, 
-.contact-form input[type=email]::placeholder, 
-.contact-form textarea::placeholder {
-    font-family: 'Work Sans', sans-serif;
-    color: #808080;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 25px;
-    opacity: 1;    
 }
 
 
@@ -922,6 +529,14 @@ footer {
     .content-1170{
         width: 1370px;
     }
+    
+    div.pp_pic_holder{
+        left: 100px!important;
+    }
+    
+    .menu-left-text{
+        margin-left: 50px;
+    }
 }
 
 @media screen and (min-width: 1920px) {
@@ -933,12 +548,28 @@ footer {
     .content-1170{
         width: 1570px;
     }
+    
+    .site-content{
+        margin-top: 50px;
+    }
+    
+    @keyframes coucou {
+    0% {
+        top: -100%;
+    }
+    
+    100% {
+        top: 50px;
+    }
+    }
+    
+    div.pp_pic_holder{
+        left: 150px!important;
+    }
 }
 
 @media screen and (min-width: 2560px) {
     
-
-
     .site-content{
         margin-top: 100px;
     }
@@ -956,25 +587,54 @@ footer {
         border-radius: 30px;
     }
     
+    .grid-item{
+        border-radius: 30px;
+    }
+    
     p.menu-text-title{
         font-size: 1em;
         padding-bottom: 8px;
+    }
+    
+    .menu-holder-front{
+        width: 20%;
+    }
+    
+    .header-logo{
+        left: 50px;
+    }
+    
+    .header-logo img{
+        width: 35%;
+    }
+    
+    @keyframes coucou {
+    0% {
+        top: -100%;
+    }
+    
+    100% {
+        top: 100px;
+    }
     }
     
     .menu-text{
         font-size: 1.4em;
     }
     
-    a.social-text img{
-        width: 10%;
-        margin-top: 10px;
+    .menu-left-text:nth-child(2){
+        margin-top: 60%;
     }
-    
+
     div.pp_default .pp_description{
         font-size: 1.4em;
         line-height: 25px;
         margin-top: -165px;
         width: 500px;
+    }
+    
+    div.pp_pic_holder{
+        left: 200px!important;
     }
 }
 
@@ -990,7 +650,11 @@ footer {
     }
     
     .header-logo img{
-        width: 20%;
+        width: 60%;
+    }
+    
+    .header-logo{
+        left: 100px;
     }
     
     .menu-holder-front{
@@ -1017,9 +681,12 @@ footer {
         font-size: 1.9em;
     }
     
-    a.social-text img{
-        width: 12%;
-        margin-top: 20px;
+    .menu-left-text:nth-child(2){
+        margin-top: 50%;
+    }
+    
+    .menu-left-text{
+        margin-left: 70px;
     }
     
     div.pp_default .pp_description{
@@ -1027,6 +694,10 @@ footer {
         line-height: 35px;
         margin-top: -235px;
         width: 700px;
+    }
+    
+    div.pp_pic_holder{
+        margin-left: 400px!important;
     }
 }
 
@@ -1048,7 +719,20 @@ footer {
     }
     
     .header-logo img{
-        width: 16%;
+        width: 22%;
+    }
+    
+    .header-logo{
+         animation-delay: 2.1s;
+    }
+    
+    .menu-left-text{
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .menu-left-text:nth-child(2){
+        margin-top: 70%;
     }
     
     div.pp_default .pp_content_container .pp_details{
@@ -1079,52 +763,55 @@ footer {
     .site-content {
         margin-top: 80px;
     } 
-    
-    .header-logo-resp{
-        display: block;
-        width: 12%;
-        position: absolute;
-        top: -100%;
-        left: 30px;
-        transition: .7s;
-        z-index: -3;
-         -webkit-animation: coucou2 1s ease-in-out;
-        animation: coucou2 1s ease;
-        -webkit-animation-fill-mode: forwards;
-        animation-fill-mode: forwards;
-        animation-delay: 1.8s;
-    }
 
-    @keyframes coucou2 {
-        0% {
-            top: -100%;
-        }
+    .intr-img2{
+        width: 50%;
+    }
     
-        100% {
-            top: 0;
-        }
+    .header-logo{
+         animation-delay: 2.1s;
+        position: absolute;
+        left: -230px;
+    }
+    
+    @keyframes coucou {
+    0% {
+        top: -100%;
+    }
+    
+    100% {
+        top: -20px;
+    }
+    }
+    
+    .menu-left-text{
+        visibility: visible;
+        opacity: 1;
+        margin-left: 20px;
+        flex-direction: column;
+        align-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 0px;
+    }
+    
+    .menu-text-title img{
+        margin-bottom: 5px;
+    }
+    
+    .menu-left-text:nth-child(2){
+        margin-top: 0%;
     }
 
     .menu-holder-front {
         display: flex;
         position: relative;
         width: calc(100% - 30px);
-        top: 60px;
+        top: 40px;
         left: 35%;
         flex-flow: nowrap;
         align-items: center;
+    }
         
-    }
-
-    .menu-left-text{
-        margin-right: 25px;
-    }
-    
-    .social-holder{
-        display: flex;
-        align-content: center;
-    }
-    
     div.pp_default .pp_content_container .pp_details{
         margin-top: 80px!important;
     }
@@ -1157,104 +844,134 @@ footer {
     .grid-item{
            width: calc(50% - 30px);
     }
-
 }
 
-
-@media screen and (max-width: 767px) {
-
-    .menu-wrapper-back {
-        padding-left: 0;
-    }    
-
-    body.page-background,
-    .menu-holder-back {
-        background-image: none;
-    }
-
-    #header-main-menu {
-        width: 90% !important;
-        display: block;
-        margin-left: 70px;
-    }   
-
-    .menu-left-part {
-        padding-top: 100px;
-        height: calc(100% - 100px);
-        padding-left: 45px;
-        width: calc(100% - 45px);
-    }
-
-    .menu-left-part > * {
-        position: relative;
-        top: 0;
-        transform: none;
-    }
-
-    .menu-left-text {
-        display: block;
-        width: 75%;
-        margin-left: 50px;
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
+@media screen and (max-width: 480px) {
 
     .grid-item, 
     .grid-sizer {
-        width: 100% !important;
+        width: 95% !important;
         float: none;
         border: 0;
         margin-bottom: 20px;
-    }      
-
-    .blog-item-holder h2.entry-title {
-        max-width: 100%;
-        margin-bottom: 30px;
+    }  
+    
+     #portfolio-wrapper{
+        max-width: 450px;
+    }
+    
+    .content-1170{
+        width: 480px;
+    }
+    
+    .header-logo img{
+        width: 18%;
+    }
+    
+    .header-logo{
+        left: -120px;
+    }
+    
+    .menu-holder-front{
+        top: 30px;
+    }
+    
+        @keyframes coucou {
+    0% {
+        top: -100%;
+    }
+    
+    100% {
+        top: 10px;
+    }
     }
 
-    .blog-item-holder .entry-info {
+    .insta-name{
         display: none;
     }
-
-    .single-post h1.entry-title, 
-    .blog-item-holder h2.entry-title, 
-    h1.entry-title.page-title {
-        font-size: 34px;
-        margin-bottom: 35px;
-    }   
-
-    .page-featured-image {
-        margin-bottom: 40px;
+    
+    .menu-holder-front{
+        left: 30%;
     }
-
-    .img-caption {
-        font-size: 12px;
-        line-height: 130%;
-        margin-top: 0;
+    
+    div.pp_default .pp_description{
+        margin-left: 0px;
+        margin-top: -105px;
     }
-
 }
 
-@media screen and (max-width: 650px) {
-
-    .single-content-wrapper {
-        margin-top: 40px;
+@media screen and (max-width: 420px) {
+    .menu-holder-front{
+        left: 0;
+        margin: 0 auto;
+        top: 90px;
     }
+    
+    #portfolio-wrapper{
+        max-width: 400px;
+    }
+    
+    .content-1170{
+        width: 420px;
+    }
+    
+    .menu-text-title img{
+        width: 15px;
+    }
+    
+    .header-logo{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    @keyframes coucou {
+    0% {
+        top: -100%;
+    }
+    
+    100% {
+        top: -80px;
+    }
+    }
+    
+    .header-logo img{
+        width: 100%;
+        display: inline-block;
+    }
+}
 
-    .single-post h1.entry-title, 
-    .blog-item-holder h2.entry-title, 
-    h1.entry-title.page-title {
-        font-size: 27px;        
+@media screen and (max-width: 375px) {
+    #portfolio-wrapper{
+        max-width: 350px;
+    }
+    
+    .content-1170{
+        width: 370px;
+    }
+    
+    .grid-item, 
+    .grid-sizer {
+        width: 93% !important;
+        margin-bottom: 10px;
     }  
+    
+}
 
-    .simple-image-slider-pagination.swiper-pagination {
-        margin-bottom: 15px;
-    }    
-
-    .single-post .post-info-wrapper .entry-info > div {
-        display: block;
-        line-height: 130%;
-        margin: 20px 0;
+@media screen and (max-width: 320px) {
+    .menu-text{
+        font-size: 10px;
     }
-
+    
+        #portfolio-wrapper{
+        max-width: 300px;
+    }
+    
+    .content-1170{
+        width: 320px;
+    }
+    
+     .grid-item, 
+    .grid-sizer {
+        width: 90% !important;
+    }
 }
