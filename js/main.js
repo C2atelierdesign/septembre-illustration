@@ -51,9 +51,17 @@
     }
     
     if (mqIpad.matches) {
-        $("#white_bg, #intro").delay(2000).fadeOut();
+        $("#white_bg, #intro").delay(1500).fadeOut();
          e.preventDefault();
     }
+    
+    $(window).on("swipeleft",function(){
+        return e.prettyPhoto.changeGalleryPage("previous"),e.prettyPhoto.stopSlideshow(),!1;
+    });
+    
+    $(window).on("swiperight",function(){
+        return e.prettyPhoto.changeGalleryPage("next"),e.prettyPhoto.stopSlideshow(),!1;
+    });
     
     $(".intr-img2").mouseover( function () {
         $(".bg-intro").css("display", "block").fadeIn();
