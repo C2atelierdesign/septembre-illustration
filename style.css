@@ -753,7 +753,7 @@ footer {
     }
     
     a.pp_next, a.pp_previous{
-        display: block;
+        display: block!important;
     }
 
 }
@@ -854,7 +854,7 @@ footer {
            width: calc(50% - 30px);
     }
       a.pp_next, a.pp_previous{
-        display: block;
+        display: block!important;
     }
 }
 
@@ -963,6 +963,7 @@ footer {
         left: 50%;
         transform: translateX(-50%);
         width: 50%;
+        top: -250%;
     }
     
     .header-logo{
@@ -984,6 +985,11 @@ footer {
         width: 93% !important;
         margin-bottom: 10px;
     } 
+    
+    .pp_hoverContainer{
+        width: 100%!important;
+        height: 100%!important;
+    }
 }
 
 
