@@ -190,7 +190,7 @@ b{
 .header-logo img {
     max-width: none;
     max-height: none;
-    width: 25%;
+    width: 100%;
 }
 
 .site-content {
@@ -308,7 +308,8 @@ a.button:hover {
 .header-logo{
     position: fixed;
     top: -100%;
-    left: 30px;
+    left: 20px;
+    width: 20%;
     filter: grayscale(100%);
     transition: all .3s ease;
     z-index: -3;
@@ -360,7 +361,7 @@ a.button:hover {
 }
 
 .menu-left-text:nth-child(2){
-    margin-top: 50%;
+    margin-top: 60%;
 }
 
 .menu-left-text .menu-text a:hover {
@@ -518,10 +519,22 @@ footer {
     #portfolio-wrapper{
         max-width: 1100px;
     }
+    
+    .header-logo{
+        width: 18%;
+    }
+    
+    .menu-left-text:nth-child(2){
+        margin-top: 50%;
+    }
 }
 
 @media screen and (min-width: 1680px) {
 
+    .site-content{
+        margin-left: 200px;
+    }
+    
     #portfolio-wrapper{
         max-width: 1250px;
     }
@@ -551,6 +564,7 @@ footer {
     
     .site-content{
         margin-top: 50px;
+        margin-left: 230px;
     }
     
     @keyframes coucou {
@@ -601,11 +615,8 @@ footer {
     }
     
     .header-logo{
-        left: 50px;
-    }
-    
-    .header-logo img{
-        width: 35%;
+        left: 40px;
+        width: 17%;
     }
     
     @keyframes coucou {
@@ -622,8 +633,12 @@ footer {
         font-size: 1.4em;
     }
     
+    .menu-left-text{
+        margin-left: 70px;
+    }
+    
     .menu-left-text:nth-child(2){
-        margin-top: 60%;
+        margin-top: 65%;
     }
 
     div.pp_default .pp_description{
@@ -647,14 +662,6 @@ footer {
     .content-1170{
         width: 3300px;
         margin-right: 100px;
-    }
-    
-    .header-logo img{
-        width: 60%;
-    }
-    
-    .header-logo{
-        left: 100px;
     }
     
     .menu-holder-front{
@@ -682,7 +689,7 @@ footer {
     }
     
     .menu-left-text:nth-child(2){
-        margin-top: 50%;
+        margin-top: 55%;
     }
     
     .menu-left-text{
@@ -717,11 +724,7 @@ footer {
     #intro img{
         width: 50%;
     }
-    
-    .header-logo img{
-        width: 22%;
-    }
-    
+
     .header-logo{
          animation-delay: 2.1s;
     }
@@ -748,6 +751,10 @@ footer {
     .site-content{
         margin-left: 180px;
     }
+    
+    a.pp_next, a.pp_previous{
+        display: block;
+    }
 
 }
 
@@ -773,6 +780,7 @@ footer {
         position: absolute;
         left: -230px;
         top: -200%;
+        width: 25%;
     }
     
     @keyframes coucou {
@@ -845,12 +853,12 @@ footer {
     .grid-item{
            width: calc(50% - 30px);
     }
+      a.pp_next, a.pp_previous{
+        display: block;
+    }
 }
 
 @media screen and (max-width: 640px) {
-    .header-logo img{
-        width: 18%;
-    }
     
     .header-logo{
         left: -180px;
@@ -895,11 +903,7 @@ footer {
     .content-1170{
         width: 480px;
     }
-    
-    .header-logo img{
-        width: 18%;
-    }
-    
+
     .header-logo{
         left: -120px;
     }
@@ -958,6 +962,7 @@ footer {
     .header-logo{
         left: 50%;
         transform: translateX(-50%);
+        width: 50%;
     }
     
     .header-logo{
@@ -972,11 +977,6 @@ footer {
     100% {
         top: -90px;
     }
-    }
-    
-    .header-logo img{
-        width: 100%;
-        display: inline-block;
     }
     
     .grid-item, 
@@ -996,11 +996,19 @@ footer {
         width: 370px;
     }
     
+    .header-logo{
+        width: 55%;
+    }
+    
 }
 
 @media screen and (max-width: 320px) {
     .menu-text{
         font-size: 10px;
+    }
+    
+       .header-logo{
+        width: 62%;
     }
     
         #portfolio-wrapper{
