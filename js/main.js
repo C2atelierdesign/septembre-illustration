@@ -69,7 +69,17 @@
     $("#intro").onTouchMove(function () {
         $(".intr-img1, .intr-img1, #white_bg, #intro").css("display", "none");
     });
+    
+$(document).ready(function(){
 
+$("a").attr({
+  title: ""
+});
+
+$( "a:hover" ).text( $( "a" ).attr( "title" ) );
+
+});
+    
 //------------------------------------------------------------------------
 //Helper Methods -->
 //------------------------------------------------------------------------
@@ -139,7 +149,7 @@
         });
     }
     
-    function imageSliderSettings() {
+       function imageSliderSettings() {
         $(".simple-image-slider-wrapper").each(function () {
             var id = $(this).attr('id');
             var speed_value = $(this).data('speed');
@@ -175,32 +185,5 @@
             }
         });
     }
-    
-        function setupBox() {
-           $("a[rel^='prettyPhoto']").prettyPhoto({
-                social_tools: false,
-                changepicturecallback: function() {
-                    setupSwipe();
-                }
-           });
-        }
-        function setupSwipe() {
-           $(".pp_content_container").touchwipe({
-            wipeLeft: function() { 
-                $.prettyPhoto.changePage('next');
-            },  
-            wipeRight: function() { 
-               $.prettyPhoto.changePage('previous');
-        },
-           min_move_x: 20,
-           min_move_y: 20,
-           preventDefaultEvents: true
-       });
-   }
-   setupBox();
-
-    
-
-
     
 })(jQuery);

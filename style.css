@@ -51,6 +51,14 @@ body a {
     transition: color .2s ease;
 }
 
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 body a:hover {
     color: #acacac;
 }
@@ -482,6 +490,7 @@ a.social-text:hover img, .mail-icon:hover{
     border-radius: 40px;
 }
 
+.grid-item a.item-link:hover 
 
 /* ===================================
     10. Footer CSS
