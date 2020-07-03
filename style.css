@@ -490,7 +490,9 @@ a.social-text:hover img, .mail-icon:hover{
     border-radius: 40px;
 }
 
-.grid-item a.item-link:hover 
+a.item-link{
+    pointer-events: none;
+}
 
 /* ===================================
     10. Footer CSS
@@ -735,7 +737,21 @@ footer {
     }
 
     .header-logo{
-         animation-delay: 2.1s;
+         animation-delay: 1.7s;
+    }
+    
+    @keyframes coucou {
+    0% {
+        top: 400px;
+        width: 40%;
+        left: 30%;
+    }
+    
+    100% {
+        top: 30px;
+        width: 20%;
+        left: 20px;
+    }
     }
     
     .menu-left-text{
@@ -785,20 +801,24 @@ footer {
     }
     
     .header-logo{
-         animation-delay: 2.1s;
+        animation-delay: 1.7s;
         position: absolute;
-        left: -230px;
-        top: -200%;
+        top: 400px;
+        left: 5%;
         width: 25%;
     }
     
     @keyframes coucou {
     0% {
-        top: -200%;
+        top: 400px;
+        width: 40%;
+        left: 5%;
     }
     
     100% {
         top: -20px;
+        width: 25%;
+        left: -230px;
     }
     }
     
@@ -875,11 +895,15 @@ footer {
     
            @keyframes coucou {
     0% {
-        top: -200%;
+        top: 150px;
+        width: 20%;
+        left: 10%;
     }
     
     100% {
         top: 0;
+        left: -180px;
+        width: 25%;
     }
     }
     
@@ -915,6 +939,7 @@ footer {
 
     .header-logo{
         left: -120px;
+        top: 250px;
     }
     
     .menu-holder-front{
@@ -923,11 +948,15 @@ footer {
     
         @keyframes coucou {
     0% {
-        top: -100%;
+        top: 250px;
+        left: 9%;
+        width: 50%;
     }
     
     100% {
         top: 10px;
+        width: 25%;
+        left: -120px;
     }
     }
 
@@ -946,6 +975,10 @@ footer {
 }
 
 @media screen and (max-width: 420px) {
+    .intr-img2{
+        width: 60%;
+    }
+    
     .site-content{
         margin-top: 100px;
     }
@@ -972,16 +1005,13 @@ footer {
         left: 50%;
         transform: translateX(-50%);
         width: 50%;
-        top: -250%;
-    }
-    
-    .header-logo{
-         animation-delay: 1.8s;
+        top: 100px;
+        animation-delay: 1.8s;
     }
     
     @keyframes coucou {
     0% {
-        top: -250%;
+        top: 100px;
     }
     
     100% {
@@ -1037,5 +1067,22 @@ footer {
      .grid-item, 
     .grid-sizer {
         width: 90% !important;
+    }
+    
+     .header-logo{
+        width: 50%;
+        top: 80px;
+    }
+    
+    @keyframes coucou {
+    0% {
+        top: 80px;
+        width: 40%;
+    }
+    
+    100% {
+        top: -90px;
+        width: 50%;
+    }
     }
 }

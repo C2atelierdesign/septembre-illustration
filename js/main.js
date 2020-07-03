@@ -36,17 +36,11 @@
         e.preventDefault();
     });
     
-    function checkPosition() {
-    if (window.matchMedia('(height: 1366px)').matches) {
-        $("#white_bg, #intro").delay(2000).fadeOut();
-         e.preventDefault();
-    }}
-    
     mq = window.matchMedia("(height: 1366px)");
     mqIpad = window.matchMedia("(max-width: 1020px)");
     
     if (mq.matches) {
-        $("#white_bg, #intro").delay(2000).fadeOut();
+        $("#white_bg, #intro").delay(1500).fadeOut();
          e.preventDefault();
     }
     
@@ -69,16 +63,7 @@
     $("#intro").onTouchMove(function () {
         $(".intr-img1, .intr-img1, #white_bg, #intro").css("display", "none");
     });
-    
-$(document).ready(function(){
 
-$("a").attr({
-  title: ""
-});
-
-$( "a:hover" ).text( $( "a" ).attr( "title" ) );
-
-});
     
 //------------------------------------------------------------------------
 //Helper Methods -->
