@@ -404,6 +404,10 @@ a.social-text:hover img, .mail-icon:hover{
     opacity: 0.5;
 }
 
+em {
+    font-style: italic;
+}
+
 /* ===================================
     4. Home CSS
 ====================================== */
@@ -492,6 +496,10 @@ a.social-text:hover img, .mail-icon:hover{
 
 a.item-link{
     pointer-events: none;
+}
+
+#content p{
+    display: none;
 }
 
 /* ===================================
