@@ -28,8 +28,10 @@
     $(window).on('scroll', function () {
         animateElement();
     });
-
-    
+ 
+    $(".header-logo>img").on('click', function () {
+        $(".intr-img1, #white_bg, #intro").css("display", "block").fadeIn();
+    });
     
     $(document).ready(function () {
         $("#white_bg, #intro").delay(12000).fadeOut();
@@ -61,8 +63,10 @@
         $(".intr-img1, .intr-img1, #white_bg, #intro").css("display", "none");
     });
     $("#intro").onTouchMove(function () {
-        $(".intr-img1, .intr-img1, #white_bg, #intro").css("display", "none");
+        $(".intr-img1, #white_bg, #intro").css("display", "none");
     });
+    
+     
 
     
 //------------------------------------------------------------------------

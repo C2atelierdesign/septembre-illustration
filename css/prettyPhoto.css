@@ -6,7 +6,6 @@
         Default Theme
 ----------------------------------- */
 
-div.pp_default .pp_top,
 div.pp_default .pp_top .pp_middle,
 div.pp_default .pp_top .pp_left,
 div.pp_default .pp_top .pp_right,
@@ -14,6 +13,8 @@ div.pp_default .pp_bottom,
 div.pp_default .pp_bottom .pp_left,
 div.pp_default .pp_bottom .pp_middle,
 div.pp_default .pp_bottom .pp_right { height: 13px; }
+
+div.pp_default .pp_top{ height: 53px;}
 
 div.pp_default .pp_content .ppt { color: #f8f8f8; }
 div.pp_default .pp_content_container .pp_left { padding-left: 13px; }
@@ -452,7 +453,9 @@ a.pp_contract {
 }
 
 a.pp_close {
-    position: absolute; right: 0; top: 0; 
+    position: relative;
+    top: -88vh; 
+    float: right;
     display: block;
     line-height:22px;
 }

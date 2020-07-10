@@ -393,11 +393,10 @@ div.pp_default a.pp_arrow_next:hover {
 div.pp_default .pp_close {
     background-image: url(../images/close.png);
     background-size: 20px 20px;
-    margin: 20px;
+    margin: 20px 0 20px 20px;
     text-indent: -99999999px;
     font-size: 0;
-    line-height: 0;   
-    position: fixed;
+    line-height: 0;
 }
 
 div.pp_default .pp_next:hover {
