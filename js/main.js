@@ -28,10 +28,6 @@
     $(window).on('scroll', function () {
         animateElement();
     });
- 
-    $(".header-logo>img").on('click', function () {
-        $(".intr-img1, #white_bg, #intro").css("display", "block").fadeIn();
-    });
     
     $(document).ready(function () {
         $("#white_bg, #intro").delay(12000).fadeOut();
@@ -40,6 +36,13 @@
     
     mq = window.matchMedia("(height: 1366px)");
     mqIpad = window.matchMedia("(max-width: 1020px)");
+    mqDesktop = window.matchMedia("(min-width: 1025px)");
+    
+    if (mqDesktop.matches) {
+        $(".header-logo>img").on('click', function () {
+        $(".intr-img1, #white_bg, #intro").css("display", "block").fadeIn();
+    });
+    }
     
     if (mq.matches) {
         $("#white_bg, #intro").delay(1500).fadeOut();

@@ -893,10 +893,6 @@ footer {
            width: calc(50% - 30px);
     }
     
-    .grid-item img{
-        filter: grayscale(0%);
-    }
-    
       a.pp_next, a.pp_previous{
         display: block!important;
     }
@@ -936,6 +932,10 @@ footer {
         width: 50%;
     }
 
+    .grid-item img{
+        filter: grayscale(0%);
+    }
+    
     .grid-item, 
     .grid-sizer {
         width: 95% !important;
