@@ -156,14 +156,14 @@ b{
 
 .intr-img2{
     width: 25%;
-    filter: grayscale(0%);
+   /* filter: grayscale(0%);*/
     z-index: 600;
     transition: all .3s ease;
 }
 
-.intr-img2:hover{
+/*.intr-img2:hover{
     filter: grayscale(100%);
-}
+}*/
 
 .site-wrapper {
     overflow: hidden;
@@ -320,7 +320,11 @@ a.button:hover {
     top: -100%;
     left: 20px;
     width: 20%;
-    filter: grayscale(100%);
+    height: auto;
+    max-width: none;
+    max-height: none;
+    cursor: pointer;
+    /*filter: grayscale(100%);*/
     transition: all .3s ease;
     z-index: -3;
      -webkit-animation: coucou 1s ease-in-out;
@@ -361,7 +365,7 @@ a.button:hover {
 
 
 .menu-holder-front:hover .header-logo{
-    filter: grayscale(0%);
+
 }
 
 .menu-holder-front:hover .menu-left-text{
