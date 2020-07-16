@@ -319,12 +319,7 @@ a.button:hover {
     position: fixed;
     top: -100%;
     left: 20px;
-    width: 20%;
-    height: auto;
-    max-width: none;
-    max-height: none;
-    cursor: pointer;
-    /*filter: grayscale(100%);*/
+    width: 18%;
     transition: all .3s ease;
     z-index: -3;
      -webkit-animation: coucou 1s ease-in-out;
@@ -361,11 +356,6 @@ a.button:hover {
      visibility: hidden;
     opacity: 0;
     transition: visibility 0s linear 0.3s, opacity 0.5s ease;
-}
-
-
-.menu-holder-front:hover .header-logo{
-
 }
 
 .menu-holder-front:hover .menu-left-text{
@@ -542,7 +532,7 @@ footer {
     }
     
     .header-logo{
-        width: 18%;
+        width: 15%;
     }
     
     .menu-left-text:nth-child(2){
@@ -637,7 +627,7 @@ footer {
     
     .header-logo{
         left: 40px;
-        width: 17%;
+        width: 16%;
     }
     
     @keyframes coucou {

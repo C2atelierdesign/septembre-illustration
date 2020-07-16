@@ -73,10 +73,10 @@
     });
     
     $("#intro").on('click', function () {
-        $(".intr-img2, #white_bg, #intro").css("display", "none");
+        $("#white_bg, #intro").css("display", "none");
     });
     $("#intro").onTouchMove(function () {
-        $(".intr-img2, #white_bg, #intro").css("display", "none");
+        $("#white_bg, #intro").css("display", "none");
     });
 
     
