@@ -54,22 +54,23 @@
          e.preventDefault();
     }
     
-    $(".menu-holder-front").mouseover( function () {
+    /*$(".menu-holder-front").mouseover( function () {
         $(".header-logo>img").attr("src","../images/septembre_colors_2_copy.png");
     });
     
     $(".menu-holder-front").mouseout( function () {
         $(".header-logo>img").attr("src","../images/septembre_grey_2_copy.png");
     });
+    */
     
     $(".intr-img2").mouseover( function () {
         $(".bg-intro").css("display", "block").fadeIn();
-        $(".intr-img2").attr("src","../images/septembre_grey.png");
+        //$(".intr-img2").attr("src","../images/septembre_grey.png");
     });
     
     $(".intr-img2").mouseout( function () {
         $(".bg-intro").css("display", "none").fadeOut();
-        $(".intr-img2").attr("src","../images/septembre_colors_2.png");
+       // $(".intr-img2").attr("src","../images/septembre_colors_2.png");
     });
     
     $("#intro").on('click', function () {
