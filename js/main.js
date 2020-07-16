@@ -79,7 +79,7 @@
     $("#intro").onTouchMove(function () {
         $("#white_bg, #intro").css("display", "none");
     });
-
+    
     
 //------------------------------------------------------------------------
 //Helper Methods -->
