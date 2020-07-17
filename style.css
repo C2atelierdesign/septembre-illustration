@@ -5,13 +5,8 @@
 2. Global CSS
 3. Menu CSS
 4. Home CSS
-5. About CSS
-6. Image Slider CSS
-7. Blog Page CSS
-8. Single Post CSS
-9. Contact Page CSS
-10. Footer CSS
-11. Responsive CSS
+5. Footer CSS
+6. Responsive CSS
 -------------------------------------------------------------------*/
 
 
@@ -42,7 +37,6 @@ body {
     background-color: #FFF;
     overflow-x: hidden;
 }
-
 
 body a {
     font-family: 'Fira Sans Condensed', sans-serif;
@@ -106,46 +100,6 @@ b{
     cursor: pointer;
 }
 
-/*.intr-img-grey{
-    height: 100%;
-    -webkit-animation: attr .5s ease-in-out;
-    animation: attr .5s ease;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    animation-delay: 8s;
-}
-
-@keyframes attr {
-    0% {
-        opacity: 1;
-    }
-    
-    100% {
-        opacity: 0;
-    }
-}
-*/
-/*.intr-img2{
-    display: none;
-    width: 35%;
-    -webkit-animation: up 1s ease-in-out;
-    animation: up 1s ease;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    animation-delay: 3.5s;
-}
-
-@keyframes up {
-    0% {
-        top: 0;
-    }
-    
-    100% {
-        top: -100%;
-    }
-}
-*/
-
 .bg-intro{
     position: absolute;
     top: 38%;
@@ -157,7 +111,6 @@ b{
 .intr-img2, .intr-img-grey{
     width: 20%;
     top: 50%;
-   /*filter: grayscale(0%);*/
     z-index: 600;
     transition: all .3s ease;
 }
@@ -165,10 +118,6 @@ b{
 .intr-img2:hover{
     opacity: 0;
 }
-
-/*.intr-img2:hover{
-    filter: grayscale(100%);
-}*/
 
 .site-wrapper {
     overflow: hidden;
@@ -180,25 +129,6 @@ b{
     width: auto;
     height: auto;
     display: block;
-}
-
-.doc-loader {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 99999;
-    background-color: #FFF;
-}
-
-.doc-loader img {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 50%;    
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .header-logo img {
@@ -220,15 +150,6 @@ b{
 
 .open .site-content {    
     transform: translateY(70px);    
-}
-
-h1.entry-title.page-title {
-    font-family: 'Unna', serif;
-    font-weight: 700;
-    margin-bottom: 60px;
-    font-size: 47px;
-    line-height: 120%;
-    padding: 0;
 }
 
 .animate {
@@ -255,58 +176,6 @@ h1.entry-title.page-title {
     width: 960px;
     max-width: 95%;
 }
-
-.medium-text {
-    font-size: 22px;
-    line-height: 40px;
-    color: #666;
-}
-
-.info-code {
-    margin-bottom: 30px;
-}
-
-.info-code-title {
-    font-size: 10px;
-    letter-spacing: 5px;
-    margin-bottom: 0;
-    line-height: 100%;
-    font-weight: 500;
-    color: #666;
-}
-
-.info-code-content, 
-.info-code-content a {
-    font-size: 15px;
-}
-
-a.socail-text {
-    margin-right: 15px;
-    font-size: 13px;
-    letter-spacing: 1px;
-    font-weight: 700;
-}
-
-a.button {
-    background-color: #000;
-    padding: 8px 0px 8px 11px;
-    display: inline-block;
-    font-size: 11px;
-    min-width: 170px;
-    letter-spacing: 8px;
-    transition: opacity .3s ease;
-    text-align: center;
-    border: 1px solid;
-}
-
-a.button:hover {
-    opacity: 0.8; 
-}
-
-.page-featured-image {
-    margin-bottom: 80px;
-}
-
 
 /* ===================================
     3. Menu CSS
@@ -487,20 +356,6 @@ em {
     padding: 50px 20px;
 }
 
-/*.grid-item a.item-link:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.75);
-    left: 0;
-    top: 0;
-    opacity: 0;
-    border-radius: 10px;
-    transition: opacity .3s ease;
-}*/
-
 .grid-item a.item-link:hover > img {
     filter: grayscale(0%);
     transform: scale(1.1);
@@ -512,7 +367,7 @@ em {
 }
 
 /* ===================================
-    10. Footer CSS
+    5. Footer CSS
 ====================================== */
 
 footer {
@@ -533,7 +388,7 @@ footer {
 }
 
 /* ===================================
-    11. Responsive CSS
+    6. Responsive CSS
 ====================================== */
 
 @media screen and (min-width: 1100px) {

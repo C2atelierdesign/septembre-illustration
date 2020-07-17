@@ -5,11 +5,6 @@
     setMenu();
     setPrettyPhoto();
 
-
-    $('.contact-form [type="submit"]').on('click', function () {
-        SendMail();
-    });
-
     $(window).on('load', function () {
         isotopeSetUp();
         imageSliderSettings();
@@ -34,6 +29,7 @@
         e.preventDefault();
     });
     
+    
     mq = window.matchMedia("(height: 1366px)");
     mqIpad = window.matchMedia("(max-width: 1020px)");
     mqDesktop = window.matchMedia("(min-width: 1025px)");
@@ -41,6 +37,7 @@
     if (mqDesktop.matches) {
         $(".header-logo>img").on('click', function () {
         $(".intr-img2, #white_bg, #intro").css("display", "block").fadeIn();
+        $("#white_bg, #intro").delay(12000).fadeOut();
     });
     }
     
@@ -53,15 +50,6 @@
         $("#white_bg, #intro").delay(1500).fadeOut();
          e.preventDefault();
     }
-    
-    /*$(".menu-holder-front").mouseover( function () {
-        $(".header-logo>img").attr("src","../images/septembre_colors_2_copy.png");
-    });
-    
-    $(".menu-holder-front").mouseout( function () {
-        $(".header-logo>img").attr("src","../images/septembre_grey_2_copy.png");
-    });
-    */
     
     $(".intr-img2").mouseover( function () {
         $(".bg-intro").css("display", "block").fadeIn();
@@ -76,6 +64,7 @@
     $("#intro").on('click', function () {
         $("#white_bg, #intro").css("display", "none");
     });
+    
     $("#intro").onTouchMove(function () {
         $("#white_bg, #intro").css("display", "none");
     });
