@@ -803,6 +803,9 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+    .pp_pic_holder.pp_default{
+        overflow: scroll!important;
+    }
     
     .intr-img2{
         width: 50%;
