@@ -803,6 +803,12 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+    
+    .pp_content {
+    -webkit-overflow-scrolling:touch !important;
+    overflow: scroll !important;
+  }
+    
     .intr-img2{
         width: 50%;
     }
