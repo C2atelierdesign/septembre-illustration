@@ -17,7 +17,7 @@
 			autoplay_slideshow: false, /* true/false */
 			opacity: 1, /* Value between 0 and 1 */
 			show_title: true, /* true/false */
-			allow_resize: false, /* Resize the photos bigger than viewport. true/false */
+			allow_resize: true, /* Resize the photos bigger than viewport. true/false */
 			allow_expand: true, /* Allow the user to expand a resized image. true/false */
 			default_width: 500,
 			default_height: 344,
@@ -94,7 +94,12 @@
 			social_tools: '<div class="twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div><div class="facebook"><iframe src="//www.facebook.com/plugins/like.php?locale=en_US&href={location_href}&amp;layout=button_count&amp;show_faces=true&amp;width=500&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:500px; height:23px;" allowTransparency="true"></iframe></div>' /* html or false to disable */
 		}, pp_settings);
 		
+		var mqMobile = window.matchMedia("(max-width: 480px)");
 		
+		if(mqMobile.matches) {
+			pp_settings.allow_resize = false;
+			$(window).bind('scroll.prettyphoto',function(){ _center_overlay(); });
+		}
 		
 		
 		// Global variables accessible only by prettyPhoto

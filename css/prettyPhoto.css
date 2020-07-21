@@ -420,7 +420,8 @@ a.pp_arrow_next {
 }
 
 a.pp_next {
-    background: url(../images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;
+   /* background: url(../images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;*/
+    background: none;
     display: block;
     float: right;
     height: 100%;
@@ -429,7 +430,8 @@ a.pp_next {
 }
 
 a.pp_previous {
-    background: url(../images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;
+   /* background: url(../images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;*/
+    background: none;
     display: block;
     float: left;
     height: 100%;
@@ -518,14 +520,15 @@ div.ppt {
     z-index: 9999;
 }
 
-@media screen and (max-width: 420px) {	
+@media screen and (max-width: 480px) {
     #pp_full_res iframe {width: 100%; height: 100%;}
     .pp_pic_holder.pp_default { width: 80%!important; left: 37.5px!important; overflow: hidden; }
     div.pp_default .pp_content_container .pp_left { padding-left: 0!important; }
     div.pp_default .pp_content_container .pp_right { padding-right: 0!important; }
     .pp_content { width: 100%!important;}
     .pp_fade { width: 100%!important; height: 100%!important; }
-   /*a.pp_expand, a.pp_contract, .pp_hoverContainer, .pp_gallery, .pp_top, .pp_bottom { display: none!important; }*/
+   a.pp_expand, a.pp_contract,  .pp_gallery, .pp_bottom { display: none!important; }
+    .pp_hoverContainer{width: 100%!important;}
     #pp_full_res img { width: 100%!important; height: auto!important; max-height: none;}
     .pp_details { width: 94%!important; padding-left: 3%; padding-right: 4%; padding-top: 10px; padding-bottom: 10px; margin-top: -2px!important; }
     a.pp_close { right: 10px!important; top: 10px!important; }

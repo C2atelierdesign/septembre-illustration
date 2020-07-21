@@ -862,6 +862,10 @@ footer {
         margin-left: 0px;
         margin-top: -105px;
     }
+    
+    div.pp_default .pp_top{
+        height: 53px;
+    }
 }
 
 @media screen and (max-width: 420px) {
@@ -985,5 +989,9 @@ footer {
         top: -90px;
         width: 50%;
     }
+    }
+    
+    div.pp_default .pp_top{
+        height: 33px;
     }
 }
