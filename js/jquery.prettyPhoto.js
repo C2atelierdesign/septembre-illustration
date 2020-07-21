@@ -5,6 +5,22 @@
 	Version: 3.1.6
 ------------------------------------------------------------------------- */
 (function($) {
+	
+	jQuery(document).ready(function($){
+	var deviceAgent = navigator.userAgent.toLowerCase();
+	var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
+	if (agentID) {
+
+        $.fn.prettyPhoto = function(pp_settings) {
+		pp_settings = jQuery.extend({
+			allow_resize: false, /* Resize the photos bigger than viewport. true/false */
+			allow_expand: false, /* Allow the user to expand a resized image. true/false */
+		})
+ 
+	}
+	}
+});
+	
 	$.prettyPhoto = {version: '3.1.6'};
 	
 	$.fn.prettyPhoto = function(pp_settings) {
@@ -92,6 +108,9 @@
 			custom_markup: '',
 			social_tools: '<div class="twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div><div class="facebook"><iframe src="//www.facebook.com/plugins/like.php?locale=en_US&href={location_href}&amp;layout=button_count&amp;show_faces=true&amp;width=500&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:500px; height:23px;" allowTransparency="true"></iframe></div>' /* html or false to disable */
 		}, pp_settings);
+		
+		
+		
 		
 		// Global variables accessible only by prettyPhoto
 		var matchedObjects = this, percentBased = false, pp_dimensions, pp_open,
@@ -884,6 +903,7 @@
 		
 		return this.unbind('click.prettyphoto').bind('click.prettyphoto',$.prettyPhoto.initialize); // Return the jQuery object for chaining. The unbind method is used to avoid click conflict when the plugin is called more than once
 	};
+	
 	
 	function getHashtag(){
 		var url = location.href;

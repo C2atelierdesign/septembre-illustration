@@ -65,9 +65,9 @@
         $("#white_bg, #intro").css("display", "none");
     });
     
-    /*$("#intro").onTouchMove(function () {
+    $("#intro").onTouchMove(function () {
         $("#white_bg, #intro").css("display", "none");
-    });*/
+    });
     
     
 //------------------------------------------------------------------------

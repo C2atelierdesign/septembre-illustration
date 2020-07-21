@@ -802,12 +802,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 480px) {
-    
-    #pp_full_res, .pp_content_container {
-        overflow: scroll!important;
-    }
-    
+@media screen and (max-width: 480px) {    
     .intr-img2{
         width: 50%;
     }
