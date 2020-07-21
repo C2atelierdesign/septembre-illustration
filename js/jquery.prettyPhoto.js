@@ -6,21 +6,6 @@
 ------------------------------------------------------------------------- */
 (function($) {
 	
-	jQuery(document).ready(function($){
-	var deviceAgent = navigator.userAgent.toLowerCase();
-	var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
-	if (agentID) {
-
-        $.fn.prettyPhoto = function(pp_settings) {
-		pp_settings = jQuery.extend({
-			allow_resize: false, /* Resize the photos bigger than viewport. true/false */
-			allow_expand: false, /* Allow the user to expand a resized image. true/false */
-		})
- 
-	}
-	}
-});
-	
 	$.prettyPhoto = {version: '3.1.6'};
 	
 	$.fn.prettyPhoto = function(pp_settings) {
@@ -32,7 +17,7 @@
 			autoplay_slideshow: false, /* true/false */
 			opacity: 1, /* Value between 0 and 1 */
 			show_title: true, /* true/false */
-			allow_resize: true, /* Resize the photos bigger than viewport. true/false */
+			allow_resize: false, /* Resize the photos bigger than viewport. true/false */
 			allow_expand: true, /* Allow the user to expand a resized image. true/false */
 			default_width: 500,
 			default_height: 344,
