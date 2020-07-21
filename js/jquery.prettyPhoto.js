@@ -96,12 +96,7 @@
 		
 		var mqMobile = window.matchMedia("(max-width: 480px)");
 		
-		if(mqMobile.matches) {
-			pp_settings.allow_resize = false;
-			$(window).bind('scroll.prettyphoto',function(){ _center_overlay(); });
-		}
-		
-		
+
 		// Global variables accessible only by prettyPhoto
 		var matchedObjects = this, percentBased = false, pp_dimensions, pp_open,
 		
@@ -918,6 +913,15 @@
 	  var results = regex.exec( url );
 	  return ( results == null ) ? "" : results[1];
 	}
+	
+			if(mqMobile.matches) {
+
+			pp_settings.allow_resize = false._center_overlay;
+			
+		
+		}
+		
+		
 	
 })(jQuery);
 
