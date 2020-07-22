@@ -678,6 +678,8 @@
 				return 'image';
 			};
 		};
+		
+		
 	
 		function _center_overlay(){
 			if(doresize && typeof $pp_pic_holder != 'undefined') {
@@ -696,6 +698,11 @@
 				});
 			};
 		};
+		
+					if(mqMobile.matches) {
+			pp_settings.allow_resize = false;
+
+		}
 	
 		function _get_scroll(){
 			if (self.pageYOffset) {
@@ -914,15 +921,7 @@
 	  return ( results == null ) ? "" : results[1];
 	}
 	
-			if(mqMobile.matches) {
 
-			pp_settings.allow_resize = false;
-				projectedTop = scroll_pos['scrollTop'] + ((windowHeight/2) - (pp_dimensions['containerHeight']/2));
-			if(projectedTop < 0) projectedTop = 0;
-			
-		
-		}
-		
 		
 	
 })(jQuery);
