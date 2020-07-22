@@ -34,6 +34,9 @@
     mqIpad = window.matchMedia("(max-width: 1020px)");
     mqDesktop = window.matchMedia("(min-width: 1025px)");
     
+
+    
+    
     if (mqDesktop.matches) {
         $(".header-logo>img").on('click', function () {
         $(".intr-img2, #white_bg, #intro").css("display", "block").fadeIn();

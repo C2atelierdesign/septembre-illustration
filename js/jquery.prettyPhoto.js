@@ -93,26 +93,7 @@
 			custom_markup: '',
 			social_tools: '<div class="twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div><div class="facebook"><iframe src="//www.facebook.com/plugins/like.php?locale=en_US&href={location_href}&amp;layout=button_count&amp;show_faces=true&amp;width=500&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:500px; height:23px;" allowTransparency="true"></iframe></div>' /* html or false to disable */
 		}, pp_settings);
-		
 			
-			var mqMobile = window.matchMedia("(max-width: 480px)");
-		
-		if(mqMobile.matches) {
-			$(window).bind('scroll.prettyphoto',function(){ $(this).scrollTop(0);});
-			/*$('.grid-item').click(function (){
-				
-			});
-			
-			/*$pp_pic_holder.prettyPhoto.open( function () {
-				$(window).scrollTop(0);
-				//$(window).bind('scroll.prettyphoto',function(){ $(this).scrollTop(0);});
-			});*/
-
-			
-		}
-
-					
-
 
 		// Global variables accessible only by prettyPhoto
 		var matchedObjects = this, percentBased = false, pp_dimensions, pp_open,
@@ -717,7 +698,6 @@
 		};
 		
 
-	
 		function _get_scroll(){
 			if (self.pageYOffset) {
 				return {scrollTop:self.pageYOffset,scrollLeft:self.pageXOffset};
@@ -727,7 +707,7 @@
 				return {scrollTop:document.body.scrollTop,scrollLeft:document.body.scrollLeft};
 			};
 		};
-
+	
 		
 	
 		function _resize_overlay() {
@@ -776,6 +756,20 @@
 				$pp_pic_holder.find('.pp_content').unbind('mouseenter mouseleave');
 				// $pp_gallery.hide();
 			}
+		}
+		
+			
+					var mqMobile = window.matchMedia("(max-width: 480px)");
+		
+		if(mqMobile.matches) {
+			$('.grid-item').click(function (){
+				$('.pp_pic_holder .pp_default').css('position','fixed');
+				//$(window).bind(function(){ $(this).scrollTop(0);});
+			});
+			
+				//$(window).bind('scroll.prettyphoto',function(){ $(this).scrollTop(0);});
+		
+
 		}
 	
 		function _build_overlay(caller){
@@ -841,7 +835,7 @@
 						});
 				});
 			};
-			
+
 			
 			// Inject the play/pause if it's a slideshow
 			if(settings.slideshow){
@@ -947,7 +941,11 @@
 	  return ( results == null ) ? "" : results[1];
 	}
 
+
+
 	
 })(jQuery);
+
+
 
 var pp_alreadyInitialized = false; // Used for the deep linking to make sure not to call the same function several times.
