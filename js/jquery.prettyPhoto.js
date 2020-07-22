@@ -916,7 +916,9 @@
 	
 			if(mqMobile.matches) {
 
-			pp_settings.allow_resize = false._center_overlay;
+			pp_settings.allow_resize = false;
+				projectedTop = scroll_pos['scrollTop'] + ((windowHeight/2) - (pp_dimensions['containerHeight']/2));
+			if(projectedTop < 0) projectedTop = 0;
 			
 		
 		}
