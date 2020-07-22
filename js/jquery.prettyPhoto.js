@@ -94,8 +94,25 @@
 			social_tools: '<div class="twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div><div class="facebook"><iframe src="//www.facebook.com/plugins/like.php?locale=en_US&href={location_href}&amp;layout=button_count&amp;show_faces=true&amp;width=500&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:500px; height:23px;" allowTransparency="true"></iframe></div>' /* html or false to disable */
 		}, pp_settings);
 		
-		var mqMobile = window.matchMedia("(max-width: 480px)");
+			
+			var mqMobile = window.matchMedia("(max-width: 480px)");
 		
+		if(mqMobile.matches) {
+			$(window).bind('scroll.prettyphoto',function(){ $(this).scrollTop(0);});
+			/*$('.grid-item').click(function (){
+				
+			});
+			
+			/*$pp_pic_holder.prettyPhoto.open( function () {
+				$(window).scrollTop(0);
+				//$(window).bind('scroll.prettyphoto',function(){ $(this).scrollTop(0);});
+			});*/
+
+			
+		}
+
+					
+
 
 		// Global variables accessible only by prettyPhoto
 		var matchedObjects = this, percentBased = false, pp_dimensions, pp_open,
@@ -699,10 +716,7 @@
 			};
 		};
 		
-					if(mqMobile.matches) {
-			pp_settings.allow_resize = false;
 
-		}
 	
 		function _get_scroll(){
 			if (self.pageYOffset) {
@@ -713,6 +727,8 @@
 				return {scrollTop:document.body.scrollTop,scrollLeft:document.body.scrollLeft};
 			};
 		};
+
+		
 	
 		function _resize_overlay() {
 			windowHeight = $(window).height(), windowWidth = $(window).width();
@@ -720,6 +736,10 @@
 			if(typeof $pp_overlay != "undefined") $pp_overlay.height($(document).height()).width(windowWidth);
 		};
 	
+				
+
+		
+		
 		function _insert_gallery(){
 			if(isSet && settings.overlay_gallery && _getFileType(pp_images[set_position])=="image") {
 				itemWidth = 52+5; // 52 beign the thumb width, 5 being the right margin.
@@ -863,6 +883,7 @@
 					return false;
 				});
 			}
+
 		
 			$pp_pic_holder.find('.pp_previous, .pp_nav .pp_arrow_previous').bind('click',function(){
 				$.prettyPhoto.changePage('previous');
@@ -878,7 +899,8 @@
 			
 			_center_overlay(); // Center it
 		};
-
+		
+				
 		if(!pp_alreadyInitialized && getHashtag()){
 			pp_alreadyInitialized = true;
 			
@@ -895,6 +917,8 @@
 		
 		return this.unbind('click.prettyphoto').bind('click.prettyphoto',$.prettyPhoto.initialize); // Return the jQuery object for chaining. The unbind method is used to avoid click conflict when the plugin is called more than once
 	};
+	
+
 	
 	
 	function getHashtag(){
@@ -913,6 +937,8 @@
 		if ( location.href.indexOf('#prettyPhoto') !== -1 ) location.hash = "prettyPhoto";
 	}
 	
+
+	
 	function getParam(name,url){
 	  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
 	  var regexS = "[\\?&]"+name+"=([^&#]*)";
@@ -920,9 +946,7 @@
 	  var results = regex.exec( url );
 	  return ( results == null ) ? "" : results[1];
 	}
-	
 
-		
 	
 })(jQuery);
 

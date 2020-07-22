@@ -522,7 +522,7 @@ div.ppt {
 
 @media screen and (max-width: 480px) {
     #pp_full_res iframe {width: 100%; height: 100%;}
-    .pp_pic_holder.pp_default { width: 80%!important; left: 37.5px!important; overflow: hidden; }
+    .pp_pic_holder.pp_default { width: 80%!important; left: 37.5px!important; overflow: hidden; top: 0!important;}
     div.pp_default .pp_content_container .pp_left { padding-left: 0!important; }
     div.pp_default .pp_content_container .pp_right { padding-right: 0!important; }
     .pp_content { width: 100%!important;}
